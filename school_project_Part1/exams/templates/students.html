@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Students</h1>
+    {% if people %}
+        <ol>
+        {% for name in people %}
+            <li>{{name}}</li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <p class="text-danger">There are no students registered yet.</p>    
+    {% endif %}
+{% endblock %}

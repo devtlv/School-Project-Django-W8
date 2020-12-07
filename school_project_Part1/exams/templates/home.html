@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="color: red">Welcome Home {{name.upper}}</h1>
+    <p>
+        <button class="btn btn-danger">Click Me</button>
+    </p>
+    <h2>This is your first page</h2>
+
+    {% if age <= 18 and age > 0 %}
+        <h1 style="color:purple">You are only {{age}}. That is too young!</h1>
+    {% elif age < 0 %}
+        <h1 style="color:green">You haven't been born yet</h1>
+    {% else %}
+    <h1 style="color:blue">Blah blah blah</h1>
+    {% endif %}
+
+    <h1>Some Food</h1>
+
+    {% for food in fav_food %}
+        <h2>{{food}}</h2>
+    {% endfor %}
+
+    <hr>
+
+    {% include 'subjects.html' %}
+
+    <a href="http://google.com" target="_blank">Go To Google</a>
+    
+{% endblock %}
