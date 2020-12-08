@@ -1,0 +1,24 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "How do you append to a Python list?"
+        },
+        {
+            "id": 2,
+            "text": "How do you start a django project?"
+        },
+        {
+            "id": 3,
+            "text": "How do you read a json file from Python?"
+        },
+        {
+            "id": 4,
+            "text": "How do you vertically align an item in html/css?"
+        },
+        {
+            "id": 5,
+            "text": "How do you register a button click in javascript?"
+        }
+    ]
+}
