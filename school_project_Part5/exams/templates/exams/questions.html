@@ -1,0 +1,22 @@
+{% extends 'exams/base.html' %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    
+    <h1>Questions</h1>
+    
+    {% if questions %}
+    
+    {% for question in questions %}
+    <a href="{% url 'question' id=question.id %}">
+        <h5>{{question.text}}</h5>
+    </a>
+    {% endfor%}
+    <hr>
+    
+    {% endif%}
+    
+    <a href="{% url 'home' %}" class="btn btn-primary" >Back to Home</a>
+    <a href="{% url 'add-question' %}" class="btn btn-danger" >Add Question</a>
+</div>
+{% endblock %}
