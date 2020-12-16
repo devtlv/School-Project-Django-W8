@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <h1>Welcome {{user.username}}</h1>
+    {% else %}
+        <h1>Welcome Stranger</h1>
+    {% endif %}
+
+    <h1>This is your Exams Dashboard</h1>
+
+    <h2>You can find questions <a href="{% url 'questions' %}">here</a></h2>
+
+    <h2>You can view students <a href="{% url 'students' %}">here</a></h2>
+
+    <h2>Search for a question <a href="{% url 'search' %}">here</a></h2>
+
+    {% if user.is_superuser %}
+    <p>
+        <button class="btn btn-danger">Self Destruct</button>
+    </p>
+    {% endif %}
+{% endblock %}
