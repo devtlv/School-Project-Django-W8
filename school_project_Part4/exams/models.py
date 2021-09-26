@@ -31,6 +31,9 @@ class Question(models.Model):
 
     def __repr__(self):
         return f"Q{self.id}: {self.text}"
+
+    def __str__(self):
+        return f"Q{self.id}: {self.text}"    
     
 
 class Answer(models.Model):
