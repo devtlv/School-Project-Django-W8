@@ -28,6 +28,10 @@ class QuestionDetails(generic.DetailView):
 
 
 
+
+
+
+
 class StudentList(generic.ListView):
     model = Student
     template_name = "exams/students.html"

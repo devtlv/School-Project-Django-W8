@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'exams',
-    'accounts'
+    'accounts',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -141,4 +142,8 @@ LOGOUT_REDIRECT_URL = 'login'
 LOGIN_REQUIRED_IGNORE_VIEW_NAMES = [
     'home',
     'login',
+    'signup',
+    'register'
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
