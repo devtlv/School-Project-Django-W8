@@ -4,11 +4,11 @@
 <div class="container-fluid mt-4">
     
     <h1>Questions</h1>
+
+    {% if question_list %}
     
-    {% if questions %}
-    
-    {% for question in questions %}
-    <a href="{% url 'question' id=question.id %}">
+    {% for question in question_list %}
+    <a href="{% url 'question' pk=question.id %}">
         <h5>{{question.text}}</h5>
     </a>
     {% endfor%}
