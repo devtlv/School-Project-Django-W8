@@ -10,4 +10,6 @@ urlpatterns = [
   path('student/<int:id>', views.student, name='student'),
   path('comingsoon/', views.comingsoon, name='comingsoon'),
   path('search/', views.search, name='search'),
+  path('asyncdemo/', views.asyncdemo, name="asyncdemo"),
+  path('asyncadduser/', views.asyncadduser, name="asyncadduser")
 ]

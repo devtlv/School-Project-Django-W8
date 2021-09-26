@@ -8,10 +8,13 @@
     {% if student_list %}
     
     {% for student in student_list %}
-    <a href="{% url 'student' id=student.id %}">
-        <h5>{{student.user.username}}</h5>
-        <img src="{{student.profile_pic}}" alt="" width=100px height=100px style="border-radius: 50%;">
-    </a>
+    <div>
+        <a href="{% url 'student' id=student.id %}">
+            <h5>{{student.user.username}}</h5>
+            <img src="{{student.profile_pic}}" alt="" width=100px height=100px style="border-radius: 50%;">
+        </a>
+    </div>
+    
     {% endfor%}
     <hr>
     

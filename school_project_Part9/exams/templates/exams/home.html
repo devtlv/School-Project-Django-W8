@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
     {% if user.is_authenticated %}
         <h1>Welcome {{user.username}} (AKA {{user.profile.nickname}})</h1>
@@ -23,4 +23,9 @@
         <button class="btn btn-danger">Self Destruct</button>
     </p>
     {% endif %}
+    <p>
+        <input type="text" name="text" id="text" placeholder="Enter some text" />
+        <button id="fetchdata1" class="btn btn-info">Add a user</button>
+    </p>
+    <script type="text/javascript" src="{% static 'exams/js/script.js' %}"></script>
 {% endblock %}

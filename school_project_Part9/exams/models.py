@@ -22,7 +22,6 @@ class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_pic = models.URLField(max_length=200, default='https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png')
 
-
 class Question(models.Model):
     
     category = models.CharField(max_length=30)
